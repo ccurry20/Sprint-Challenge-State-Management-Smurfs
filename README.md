@@ -23,10 +23,38 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+In your typical react application state is passed top-down (parent to child) via props, but this can
+become very cumbersome quickly, especially when those props are required by many
+components across your application. However with the introduction of reacts Context API you
+no longer have to pass props down from component to component - what React devs call “prop
+drilling”. We can now store data on a context object, and retrieve that data in the necessary
+components from the context object, not props!
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+a) Action – is the action that takes places in the app.
+b) Reducers – handles or processes the action. Accepts previous state, action and returns the next
+state for your app
+c) Store – this is where everything that changes within the app is held or represented. The store
+contains our state for our app.
+d) In the store is where all state changes are explicitly handled
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+a) Your application state is global – meaning any component, anywhere in the app can access it
+b) Component state is local – it lives within that specific component. It can only be updated within
+that component and passed down to its children via props.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+a) Redux-thunk is a middleware that provides the ability to handle asynchronous operations inside
+the action creators. It can intercept the action before it makes it to the reducer.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+a) Redux. I think it was easier to understand. And to see the flow of how everything is working.
 
 ## Project Set Up
 
