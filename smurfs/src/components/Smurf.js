@@ -3,6 +3,10 @@ import {connect} from "react-redux";
 import {fetchSmurf} from "../smurfAction/index";
 
 class Smurfs extends React.Component {
+
+  componentDidMount(){
+    this.props.fetchSmurf()
+  }
     render() {
       return (
           <div>
